@@ -25,13 +25,13 @@ public class AsterixController {
         return service.saveNewAsterixCharacter(asterixCharacter);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public AsterixCharacter updateAsterixCharacter (@PathVariable String id,
                                                     @RequestBody AsterixCharacterDto asterixCharacter){
         return service.updateCharacterById(id, asterixCharacter);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public boolean deleteCharacter(@PathVariable String id){
         return service.deleteCharById(id);
     }
